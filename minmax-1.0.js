@@ -32,9 +32,10 @@ function minmax_bind(el) {
     em.style.position= 'absolute'; em.style.visibility= 'hidden';
     em.style.fontSize= 'xx-large'; em.style.height= '5em';
     em.style.top='-5em'; em.style.left= '0';
-    if (em.style.setExpression) {
+    try {
       em.style.setExpression('width', 'minmax_checkFont()');
       document.body.insertBefore(em, document.body.firstChild);
+    } catch(e) {
     }
   }
 
